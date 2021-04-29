@@ -1,0 +1,31 @@
+form > div {
+    padding: .2rem .1rem;
+}
+
+form > div > label {
+    margin-right: .5rem;
+}
+
+form > div > label::after {
+    content: ":";
+}
+
+/* Stylize validation */
+.error {
+    display: none;
+    color: red;
+    margin-left: .5rem;
+}
+
+.submitted input:valid,
+.submitted select:valid {
+    border: 1px solid green;
+}
+.submitted input:invalid,
+.submitted select:invalid {
+    border: 1px solid red;
+}
+.submitted input:invalid + .error,
+.submitted select:invalid + .error{
+    display: inline;
+}
